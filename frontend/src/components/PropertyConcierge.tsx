@@ -8,14 +8,35 @@ export default function PropertyConcierge() {
     { role: 'assistant', content: 'Hi! I am the Property Concierge. Looking for a manager who handles 1-5 units?' }
   ]);
   const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSend = () => {
-    if (!input.trim()) return;
-    setMessages([...messages, { role: 'user', content: input }]);
+  const handleSend = async () => {
+    if (!input.trim() || isLoading) return;
+    
+    const userMessage = input;
     setInput('');
-    setTimeout(() => {
-      setMessages(prev => [...prev, { role: 'assistant', content: 'I can help with that. Let me scan the local listings for you...' }]);
-    }, 1000);
+    setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: userMessage,
+          history: messages.slice(1) // skip the initial greeting
+        })
+      });
+
+      if (!response.ok) throw new Error('API Error');
+
+      const data = await response.json();
+      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
+    } catch (error) {
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Oops! I am offline right now. Try again later.' }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -39,6 +60,15 @@ export default function PropertyConcierge() {
                 </div>
               </div>
             ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="px-4 py-2 rounded-2xl text-sm bg-white border border-slate-200 text-slate-800 rounded-bl-none shadow-sm flex gap-1">
+                  <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="p-3 border-t border-slate-100 bg-white">
             <div className="relative">
@@ -47,12 +77,14 @@ export default function PropertyConcierge() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                disabled={isLoading}
                 placeholder="Ask about local fees..." 
-                className="w-full pl-4 pr-10 py-2 border border-slate-200 rounded-full text-sm focus:outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500"
+                className="w-full pl-4 pr-10 py-2 border border-slate-200 rounded-full text-sm focus:outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500 disabled:bg-slate-50"
               />
               <button 
                 onClick={handleSend}
-                className="absolute right-1.5 top-1.5 w-7 h-7 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-slate-800 transition-colors"
+                disabled={isLoading}
+                className="absolute right-1.5 top-1.5 w-7 h-7 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-slate-800 transition-colors disabled:opacity-50"
               >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
               </button>

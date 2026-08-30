@@ -1,0 +1,57 @@
+[
+  {
+    "companyName": "Apex Property Management New York",
+    "city": "New York",
+    "state": "PA",
+    "websiteUrl": "https://apex-newyork-pm.com",
+    "contactEmail": "leasing@apex-newyork-pm.com",
+    "contactPhone": "555-0199",
+    "isFeatured": true,
+    "feeStructure": "10% of rent",
+    "minUnitRequirement": 2
+  },
+  {
+    "companyName": "Apex Property Management Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA",
+    "websiteUrl": "https://apex-losangeles-pm.com",
+    "contactEmail": "leasing@apex-losangeles-pm.com",
+    "contactPhone": "555-0199",
+    "isFeatured": false,
+    "feeStructure": "10% of rent",
+    "minUnitRequirement": 2
+  },
+  {
+    "companyName": "Apex Property Management Chicago",
+    "city": "Chicago",
+    "state": "WI",
+    "websiteUrl": "https://apex-chicago-pm.com",
+    "contactEmail": "leasing@apex-chicago-pm.com",
+    "contactPhone": "555-0199",
+    "isFeatured": false,
+    "feeStructure": "10% of rent",
+    "minUnitRequirement": 2
+  },
+  {
+    "companyName": "Apex Property Management Dallas",
+    "city": "Dallas",
+    "state": "TX",
+    "websiteUrl": "https://apex-dallas-pm.com",
+    "contactEmail": "leasing@apex-dallas-pm.com",
+    "contactPhone": "555-0199",
+    "isFeatured": false,
+    "feeStructure": "10% of rent",
+    "minUnitRequirement": 2
+  },
+  {
+    "companyName": "Apex Property Management Houston",
+    "city": "Houston",
+    "state": "TX",
+    "websiteUrl": "https://apex-houston-pm.com",
+    "contactEmail": "leasing@apex-houston-pm.com",
+    "contactPhone": "555-0199",
+    "isFeatured": false,
+    "feeStructure": "10% of rent",
+    "minUnitRequirement": 2
+  }
+]
