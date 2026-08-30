@@ -1,0 +1,15 @@
+# The schema defines the PostgreSQL tables for our Property Management directory.
+
+type PropertyManager @table(key: "id") {
+  id: UUID! @default(expr: "uuidV4()")
+  companyName: String!
+  city: String!
+  state: String!
+  websiteUrl: String!
+  contactEmail: String
+  contactPhone: String
+  minUnitRequirement: Int
+  feeStructure: String
+  maintenanceStructure: String
+  isFeatured: Boolean! @default(value: false)
+}

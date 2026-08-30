@@ -1,0 +1,7 @@
+# The connector defines the generated SDKs and mutations
+
+connectorId: "seo-directory-backend"
+generate:
+  javascriptSdk:
+    outputDir: "../../frontend/src/dataconnect-generated/js"
+    package: "@hi-company/seo-directory"

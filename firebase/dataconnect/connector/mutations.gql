@@ -1,0 +1,29 @@
+# Define a mutation to easily insert scraped Property Managers from our Python pipeline
+
+mutation CreatePropertyManager(
+  $companyName: String!
+  $city: String!
+  $state: String!
+  $websiteUrl: String!
+  $contactEmail: String
+  $contactPhone: String
+  $minUnitRequirement: Int
+  $feeStructure: String
+  $maintenanceStructure: String
+  $isFeatured: Boolean! = false
+) @auth(level: USER) {
+  propertyManager_insert(
+    data: {
+      companyName: $companyName
+      city: $city
+      state: $state
+      websiteUrl: $websiteUrl
+      contactEmail: $contactEmail
+      contactPhone: $contactPhone
+      minUnitRequirement: $minUnitRequirement
+      feeStructure: $feeStructure
+      maintenanceStructure: $maintenanceStructure
+      isFeatured: $isFeatured
+    }
+  )
+}

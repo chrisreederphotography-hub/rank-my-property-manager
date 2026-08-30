@@ -1,0 +1,17 @@
+{
+  "dataconnect": {
+    "source": "firebase/dataconnect"
+  },
+  "apphosting": {
+    "backendId": "seo-frontend",
+    "rootDir": "frontend"
+  },
+  "hosting": {
+    "source": "frontend",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
