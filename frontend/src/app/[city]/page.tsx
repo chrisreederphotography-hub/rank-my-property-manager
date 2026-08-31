@@ -1,25 +1,56 @@
 import React from 'react';
-import PropertyConcierge from '../../../../components/PropertyConcierge';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import PropertyConcierge from '../../components/PropertyConcierge';
+import seoData from '../../data/seo_city_database.json';
 
 interface Props {
   params: {
-    state: string;
     city: string;
   };
 }
 
-export default async function LocationDirectoryPage({ params }: Props) {
-  const { state, city } = params;
-  
-  const formattedCity = city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  const formattedState = state.toUpperCase();
+// Generate static params so Next.js statically builds all these routes ahead of time
+export async function generateStaticParams() {
+  return seoData.map((data) => ({
+    city: data.city.toLowerCase().replace(/\s+/g, '-'),
+  }));
+}
 
+// Dynamically generate the SEO Meta Title for the head tag
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const cityParam = params.city;
+  const data = seoData.find(d => d.city.toLowerCase().replace(/\s+/g, '-') === cityParam);
+
+  if (!data) {
+    return {
+      title: 'Property Managers | Rank My Property Manager',
+    };
+  }
+
+  return {
+    title: data.meta_title,
+    description: data.intro_paragraph.substring(0, 160) + '...',
+  };
+}
+
+export default async function CityDirectoryPage({ params }: Props) {
+  const cityParam = params.city;
+  
+  // Look up the SEO data based on the city slug
+  const pageData = seoData.find(d => d.city.toLowerCase().replace(/\s+/g, '-') === cityParam);
+  
+  if (!pageData) {
+    notFound();
+  }
+
+  // Generate some mock data for now until we swap to actual Data Connect live data
   const mockManagers = [
     {
       id: '1',
-      companyName: `Apex Management of ${formattedCity}`,
-      city: formattedCity,
-      state: formattedState,
+      companyName: `Apex Management of ${pageData.city}`,
+      city: pageData.city,
+      state: pageData.state,
       websiteUrl: 'https://example.com',
       contactPhone: '(555) 010-0982',
       minUnitRequirement: 2,
@@ -28,9 +59,9 @@ export default async function LocationDirectoryPage({ params }: Props) {
     },
     {
       id: '2',
-      companyName: `${formattedCity} Property Pros`,
-      city: formattedCity,
-      state: formattedState,
+      companyName: `${pageData.city} Property Pros`,
+      city: pageData.city,
+      state: pageData.state,
       websiteUrl: 'https://pros-example.com',
       contactPhone: '(555) 010-3841',
       minUnitRequirement: 1,
@@ -40,8 +71,8 @@ export default async function LocationDirectoryPage({ params }: Props) {
     {
       id: '3',
       companyName: `Elevate Real Estate`,
-      city: formattedCity,
-      state: formattedState,
+      city: pageData.city,
+      state: pageData.state,
       websiteUrl: 'https://elevate-example.com',
       contactPhone: '(555) 293-8472',
       minUnitRequirement: 5,
@@ -141,12 +172,19 @@ export default async function LocationDirectoryPage({ params }: Props) {
         <main className="flex-1 p-6 sm:p-8 lg:p-10">
           <div className="max-w-6xl mx-auto">
             <div className="mb-8">
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                Property Managers in {formattedCity}, {formattedState}
+              {/* Dynamic H1 Injection */}
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-4">
+                {pageData.h1}
               </h1>
-              <p className="mt-2 text-lg text-slate-600">
-                Compare {sortedManagers.length} vetted local management companies tailored for your portfolio.
+              {/* Dynamic Intro Paragraph Injection */}
+              <p className="mt-2 text-base leading-relaxed text-slate-600 max-w-4xl">
+                {pageData.intro_paragraph}
               </p>
+            </div>
+            
+            <div className="flex justify-between items-end mb-6 border-b border-slate-200 pb-4">
+               <h2 className="text-xl font-semibold text-slate-900">Top Local Providers</h2>
+               <p className="text-sm text-slate-500">Showing {sortedManagers.length} vetted results</p>
             </div>
             
             {/* Grid Layout */}
