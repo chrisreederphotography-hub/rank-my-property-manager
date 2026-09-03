@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-3.5-flash' });
 
     // System instruction for the Concierge persona
     const systemPrompt = `You are the Property Concierge for "Rank My Property Manager". 

@@ -209,6 +209,32 @@ export default async function CityDirectoryPage(props: Props) {
           </div>
         </main>
       </div>
+
+      {/* JSON-LD AEO Schema for the Directory */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": `Best Property Managers in ${pageData.city || pageData.city_name}`,
+            "description": pageData.meta_description || pageData.intro_paragraph,
+            "itemListElement": sortedManagers.map((manager, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "LocalBusiness",
+                "name": manager.companyName,
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": pageData.city || pageData.city_name,
+                  "addressRegion": pageData.state?.toUpperCase()
+                }
+              }
+            }))
+          })
+        }}
+      />
       <PropertyConcierge />
     </div>
   );
