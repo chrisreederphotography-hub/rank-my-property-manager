@@ -30,5 +30,57 @@
       "rating": 4.7,
       "reviewCount": 394
     }
+  ],
+  "miami": [
+    {
+      "id": "pristine-property-management-miami",
+      "companyName": "Pristine Property Management",
+      "websiteUrl": "https://pristinepm.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Percentage Based",
+      "isFeatured": true,
+      "rating": 4.9,
+      "reviewCount": 400
+    },
+    {
+      "id": "miami-residences-management",
+      "companyName": "Miami Residences Management",
+      "websiteUrl": "https://miamiresidences.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Percentage Based",
+      "isFeatured": false,
+      "rating": 5,
+      "reviewCount": 35
+    },
+    {
+      "id": "homeriver-group-miami",
+      "companyName": "HomeRiver Group Miami",
+      "websiteUrl": "https://www.miami-propertymanagement.net/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Percentage Based",
+      "isFeatured": false,
+      "rating": 4.5,
+      "reviewCount": 126
+    },
+    {
+      "id": "rpm-miami",
+      "companyName": "Real Property Management Miami",
+      "websiteUrl": "https://rpmmiami.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Percentage Based",
+      "isFeatured": false,
+      "rating": 4.6,
+      "reviewCount": 85
+    },
+    {
+      "id": "ziprent-miami",
+      "companyName": "Ziprent",
+      "websiteUrl": "https://www.ziprent.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "$125 Flat-fee",
+      "isFeatured": false,
+      "rating": 4.5,
+      "reviewCount": 500
+    }
   ]
 }

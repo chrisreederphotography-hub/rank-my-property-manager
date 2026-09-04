@@ -10,5 +10,17 @@
       "average_rating": 4.7,
       "top_pm_name": "Ziprent Austin"
     }
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "meta_title": "Best Property Management in Miami, FL | RankMyPropertyManager",
+    "h1": "Top-Rated Property Management Companies in Miami, FL",
+    "intro_paragraph": "Looking for the best property management in Miami, FL? Our verified directory analyzes the top local property managers serving the Miami area. Based on real Google Reviews, top-rated providers like Pristine Property Management and Ziprent are leading the market in tenant placement and maintenance coordination. Compare local fees and reviews to protect your real estate investment in South Florida.",
+    "stats": {
+      "total_pms": 5,
+      "average_rating": 4.7,
+      "top_pm_name": "Pristine Property Management"
+    }
   }
 ]
