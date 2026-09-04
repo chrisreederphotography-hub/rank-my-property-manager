@@ -82,5 +82,109 @@
       "rating": 4.5,
       "reviewCount": 500
     }
+  ],
+  "atlanta": [
+    {
+      "id": "backyard-realty-group",
+      "companyName": "Backyard Realty Group",
+      "websiteUrl": "https://www.backyardrealty.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "8-12% of monthly rent",
+      "isFeatured": true,
+      "rating": 5,
+      "reviewCount": 46
+    },
+    {
+      "id": "home365-atlanta",
+      "companyName": "Home365",
+      "websiteUrl": "https://www.home365.co/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Custom/Inclusive Pricing",
+      "isFeatured": false,
+      "rating": 4.6,
+      "reviewCount": 126
+    },
+    {
+      "id": "evernest-property-management",
+      "companyName": "Evernest Property Management",
+      "websiteUrl": "https://www.evernest.co/locations/atlanta/",
+      "minUnitRequirement": 1,
+      "feeStructure": "8-10% of monthly rent",
+      "isFeatured": true,
+      "rating": 4.5,
+      "reviewCount": 4188
+    },
+    {
+      "id": "excalibur-homes",
+      "companyName": "Excalibur Homes",
+      "websiteUrl": "https://www.excaliburhomes.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "From 4% of collected rent",
+      "isFeatured": false,
+      "rating": 4.5,
+      "reviewCount": 8720
+    },
+    {
+      "id": "citiside-property-management",
+      "companyName": "Citiside Property Management",
+      "websiteUrl": "https://www.citisidepropertymanagement.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "8-12% of monthly rent",
+      "isFeatured": false,
+      "rating": 4.1,
+      "reviewCount": 425
+    }
+  ],
+  "phoenix": [
+    {
+      "id": "on-q-property-management-phoenix",
+      "companyName": "On Q Property Management",
+      "websiteUrl": "https://www.onqpm.com",
+      "minUnitRequirement": 1,
+      "feeStructure": "Flat-rate",
+      "isFeatured": true,
+      "rating": 4.5,
+      "reviewCount": 6100
+    },
+    {
+      "id": "service-star-realty-phoenix",
+      "companyName": "Service Star Realty",
+      "websiteUrl": "https://www.leaseaz.com",
+      "minUnitRequirement": 1,
+      "feeStructure": "$79 Flat-fee",
+      "isFeatured": true,
+      "rating": 4.6,
+      "reviewCount": 1200
+    },
+    {
+      "id": "belong-home-phoenix",
+      "companyName": "Belong Home",
+      "websiteUrl": "https://belonghome.com",
+      "minUnitRequirement": 1,
+      "feeStructure": "8% of Monthly Rent",
+      "isFeatured": false,
+      "rating": 4.6,
+      "reviewCount": 4000
+    },
+    {
+      "id": "denali-real-estate-phoenix",
+      "companyName": "Denali Real Estate LLC",
+      "websiteUrl": "https://denaliarizona.com",
+      "minUnitRequirement": 1,
+      "feeStructure": "$85 Flat-fee",
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 339
+    },
+    {
+      "id": "mark-brower-properties-phoenix",
+      "companyName": "Mark Brower Properties",
+      "websiteUrl": "https://www.markrent.com",
+      "minUnitRequirement": 1,
+      "feeStructure": "Tiered Flat-fee",
+      "isFeatured": false,
+      "rating": 4.4,
+      "reviewCount": 175
+    }
   ]
 }

@@ -22,5 +22,29 @@
       "average_rating": 4.7,
       "top_pm_name": "Pristine Property Management"
     }
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "meta_title": "Best Property Management in Atlanta, GA | RankMyPropertyManager",
+    "h1": "Top-Rated Property Management Companies in Atlanta, GA",
+    "intro_paragraph": "Looking for the best property management in Atlanta, GA? Our verified directory analyzes the top local property managers serving the Atlanta metro area. Based on real Google Reviews, top-rated providers like Backyard Realty Group and Evernest are leading the market. Compare local fees and reviews to protect your real estate investment in Georgia.",
+    "stats": {
+      "total_pms": 5,
+      "average_rating": 4.5,
+      "top_pm_name": "Backyard Realty Group"
+    }
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "meta_title": "Best Property Management in Phoenix, AZ | RankMyPropertyManager",
+    "h1": "Top-Rated Property Management Companies in Phoenix, AZ",
+    "intro_paragraph": "Looking for the best property management in Phoenix, AZ? Our verified directory analyzes the top local property managers serving the Phoenix area. Based on real Google Reviews, top-rated providers like On Q Property Management and Service Star Realty are leading the market. Compare local fees and reviews to protect your real estate investment in Arizona.",
+    "stats": {
+      "total_pms": 5,
+      "average_rating": 4.6,
+      "top_pm_name": "On Q Property Management"
+    }
   }
 ]
