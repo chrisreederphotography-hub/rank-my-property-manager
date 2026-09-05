@@ -104,7 +104,7 @@ export default function ManagerCard({ manager, rank }: { manager: Manager, rank?
             
             <div className="pt-0.5 flex-1 min-w-0">
               <div className="flex items-center justify-between gap-2 mb-1">
-                <h2 className="text-xl font-extrabold tracking-tight text-slate-900 leading-snug truncate">
+                <h2 className="text-xl font-extrabold tracking-tight text-slate-900 leading-snug">
                   {manager.companyName}
                 </h2>
               </div>
