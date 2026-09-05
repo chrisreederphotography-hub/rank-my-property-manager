@@ -1,9 +1,9 @@
-# What is the Average Property Management Fee in Phoenix, AZ? (2026 Data)
-
-**Published:** September 5, 2026  
-**Category:** Phoenix Landlord Resources  
-
-![Phoenix Real Estate Hero](/images/blog/phoenix_real_estate_hero.jpg)
+---
+title: "What is the Average Property Management Fee in Phoenix, AZ? (2026 Data)"
+date: "2026-09-05"
+excerpt: "Phoenix’s real estate market has seen unprecedented growth over the last decade. As a major hub for tech migration and snowbirds, the demand for renta..."
+hero_image: "/images/blog/phoenix_pm_meeting.jpg"
+---
 
 Phoenix’s real estate market has seen unprecedented growth over the last decade. As a major hub for tech migration and snowbirds, the demand for rental properties across Maricopa County—from Scottsdale down to Chandler—is massive. But managing properties in the Valley of the Sun comes with intense seasonal tenant turnover and strict AC maintenance requirements.
 
@@ -17,7 +17,6 @@ According to proprietary data from RankMyPropertyManager, the average property m
 
 Because of the highly competitive nature of the Phoenix market, baseline management fees are slightly lower than the national average. However, the monthly management fee is only one piece of the puzzle. The true cost of property management is dictated by the "hidden" fees buried in your contract.
 
-![Professional Handshake Office](/images/blog/phoenix_pm_meeting.jpg)
 
 ## Breakdown of Standard Phoenix PM Fees
 
