@@ -1,5 +1,13 @@
 {
+  "dataconnect": {
+    "source": "firebase/dataconnect"
+  },
+  "apphosting": {
+    "backendId": "rank-my-property-manager",
+    "rootDir": "frontend"
+  },
   "hosting": {
+    "site": "rankmypropertymanager-site",
     "source": "frontend",
     "ignore": [
       "firebase.json",
