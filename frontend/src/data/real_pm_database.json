@@ -186,5 +186,57 @@
       "rating": 4.4,
       "reviewCount": 175
     }
+  ],
+  "dallas": [
+    {
+      "id": "flat-fee-landlord-dallas",
+      "companyName": "Flat Fee Landlord",
+      "websiteUrl": "https://www.flatfeelandlord.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Flat-fee",
+      "isFeatured": true,
+      "rating": 4.4,
+      "reviewCount": 140
+    },
+    {
+      "id": "real-property-management-engage-dallas",
+      "companyName": "Real Property Management Engage",
+      "websiteUrl": "https://www.rpmengage.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Percentage Based",
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 95
+    },
+    {
+      "id": "keyrenter-north-dallas",
+      "companyName": "Keyrenter North Dallas",
+      "websiteUrl": "https://keyrenternorthdallas.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "9% of monthly rent",
+      "isFeatured": false,
+      "rating": 4.6,
+      "reviewCount": 112
+    },
+    {
+      "id": "jogip-property-management-dallas",
+      "companyName": "JoGip Property Management",
+      "websiteUrl": "https://jogipdfw.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Flat-fee",
+      "isFeatured": false,
+      "rating": 4.5,
+      "reviewCount": 87
+    },
+    {
+      "id": "navigate-property-management-dallas",
+      "companyName": "Navigate Property Management",
+      "websiteUrl": "https://navigatepm.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Percentage Based",
+      "isFeatured": false,
+      "rating": 4.3,
+      "reviewCount": 65
+    }
   ]
 }
