@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export default function Home() {
   const topCities = [
-    { name: 'Austin, TX', slug: 'austin' },
-    { name: 'Miami, FL', slug: 'miami' },
-    { name: 'Dallas, TX', slug: 'dallas' },
-    { name: 'Chicago, IL', slug: 'chicago' },
-    { name: 'Houston, TX', slug: 'houston' },
-    { name: 'Atlanta, GA', slug: 'atlanta' },
+    { name: 'Austin, TX', slug: 'tx/austin' },
+    { name: 'Miami, FL', slug: 'fl/miami' },
+    { name: 'Dallas, TX', slug: 'tx/dallas' },
+    { name: 'Chicago, IL', slug: 'il/chicago' },
+    { name: 'Houston, TX', slug: 'tx/houston' },
+    { name: 'Atlanta, GA', slug: 'ga/atlanta' },
   ];
 
   return (
