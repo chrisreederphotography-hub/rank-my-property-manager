@@ -2,7 +2,7 @@
 title: "What is the Average Property Management Fee in Atlanta, GA? (2026 Data)"
 date: "2026-09-05"
 excerpt: "Atlanta’s real estate market has exploded over the last five years. With massive corporate relocations and a booming population, the demand for rental..."
-hero_image: "/images/blog/atlanta_pm_meeting.jpg"
+hero_image: "/images/blog/atlanta_pm_fees.jpg"
 ---
 
 Atlanta’s real estate market has exploded over the last five years. With massive corporate relocations and a booming population, the demand for rental properties across Fulton, DeKalb, and Cobb counties is staggering. But managing properties in such a sprawling and diverse metro area requires serious local expertise.

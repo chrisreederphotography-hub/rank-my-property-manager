@@ -2,7 +2,7 @@
 title: "What is the Average Property Management Fee in Dallas, TX? (2026 Data)"
 date: "2026-09-05"
 excerpt: "The Dallas-Fort Worth metroplex is one of the most explosive rental markets in the country. With massive corporate headquarters and a rapidly growing ..."
-hero_image: "/images/blog/dallas_pm_meeting.jpg"
+hero_image: "/images/blog/dallas_pm_fees.jpg"
 ---
 
 The Dallas-Fort Worth metroplex is one of the most explosive rental markets in the country. With massive corporate headquarters and a rapidly growing population, the demand for rental properties across Dallas, Collin, and Denton counties is incredibly high. But managing properties in such a sprawling and competitive market requires serious local expertise.

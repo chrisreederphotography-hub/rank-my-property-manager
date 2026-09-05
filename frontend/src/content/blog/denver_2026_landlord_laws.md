@@ -1,7 +1,7 @@
 ---
 title: "Navigating Denver's 2026 Landlord-Tenant Laws: What Property Owners Need to Know"
 date: "2026-09-05"
-hero_image: "/images/blog/denver_real_estate_hero.jpg"
+hero_image: "/images/blog/denver_tenant_laws.jpg"
 author: "The RankMyPropertyManager Team"
 ---
 
