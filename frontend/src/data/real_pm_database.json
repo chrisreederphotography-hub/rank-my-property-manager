@@ -238,5 +238,57 @@
       "rating": 4.3,
       "reviewCount": 65
     }
+  ],
+  "chicago": [
+    {
+      "id": "gc-realty-development",
+      "companyName": "GC Realty & Development",
+      "websiteUrl": "https://www.gcrealtyinc.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "7% - 10% of monthly rent",
+      "isFeatured": true,
+      "rating": 4.6,
+      "reviewCount": 760
+    },
+    {
+      "id": "kettle-and-oak-chicago",
+      "companyName": "Kettle & Oak",
+      "websiteUrl": "https://www.kettleandoak.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Flat-fee pricing",
+      "isFeatured": false,
+      "rating": 4.4,
+      "reviewCount": 88
+    },
+    {
+      "id": "real-property-management-chicago-group",
+      "companyName": "Real Property Management Chicago Group",
+      "websiteUrl": "https://www.rpmchicagogroup.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Owner-First percentage fee",
+      "isFeatured": false,
+      "rating": 4.1,
+      "reviewCount": 267
+    },
+    {
+      "id": "chicago-style-management",
+      "companyName": "Chicago Style Management",
+      "websiteUrl": "https://www.chicagostylemanagement.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Custom Pricing",
+      "isFeatured": false,
+      "rating": 5,
+      "reviewCount": 2
+    },
+    {
+      "id": "keyrenter-chicago-north",
+      "companyName": "Keyrenter Property Management Chicago North",
+      "websiteUrl": "https://keyrenterchicagonorth.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Custom Pricing",
+      "isFeatured": false,
+      "rating": 4.7,
+      "reviewCount": 64
+    }
   ]
 }

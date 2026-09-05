@@ -58,5 +58,17 @@
       "average_rating": 4.5,
       "top_pm_name": "Real Property Management Engage"
     }
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "meta_title": "Best Property Management in Chicago, IL | RankMyPropertyManager",
+    "h1": "Top-Rated Property Management Companies in Chicago, IL",
+    "intro_paragraph": "Looking for the best property management in Chicago, IL? Our verified directory analyzes the top local property managers serving the Chicago area. Based on real Google Reviews, top-rated providers like GC Realty & Development and Kettle & Oak are leading the market. Compare local fees and reviews to protect your real estate investment in Illinois.",
+    "stats": {
+      "total_pms": 5,
+      "average_rating": 4.5,
+      "top_pm_name": "GC Realty & Development"
+    }
   }
 ]
