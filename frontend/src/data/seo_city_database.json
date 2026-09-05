@@ -70,5 +70,17 @@
       "average_rating": 4.5,
       "top_pm_name": "GC Realty & Development"
     }
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "meta_title": "Best Property Management in Denver, CO | RankMyPropertyManager",
+    "h1": "Top-Rated Property Management Companies in Denver, CO",
+    "intro_paragraph": "Looking for the best property management in Denver, CO? Our verified directory analyzes the top local property managers serving the Denver metro area. Based on real Google Reviews, top-rated providers like Grace Property Management and Pioneer Property Management are leading the market. Compare local fees and reviews to protect your real estate investment in Colorado.",
+    "stats": {
+      "total_pms": 5,
+      "average_rating": 4.7,
+      "top_pm_name": "Grace Property Management"
+    }
   }
 ]

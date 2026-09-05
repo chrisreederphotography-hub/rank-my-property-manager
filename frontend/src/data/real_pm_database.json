@@ -290,5 +290,57 @@
       "rating": 4.7,
       "reviewCount": 64
     }
+  ],
+  "denver": [
+    {
+      "id": "keyrenter-denver",
+      "companyName": "Keyrenter Property Management Denver",
+      "websiteUrl": "https://keyrenterdenver.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "9% of monthly rent",
+      "isFeatured": true,
+      "rating": 4.4,
+      "reviewCount": 1000
+    },
+    {
+      "id": "grace-property-management-denver",
+      "companyName": "Grace Property Management",
+      "websiteUrl": "https://www.rentgrace.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "Custom/Request Quote",
+      "isFeatured": true,
+      "rating": 4.8,
+      "reviewCount": 600
+    },
+    {
+      "id": "colorado-realty-property-management-denver",
+      "companyName": "Colorado Realty and Property Management, Inc.",
+      "websiteUrl": "https://www.coloradorpm.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "8-12% of monthly rent",
+      "isFeatured": false,
+      "rating": 4.8,
+      "reviewCount": 250
+    },
+    {
+      "id": "pioneer-property-management-denver",
+      "companyName": "Pioneer Property Management",
+      "websiteUrl": "https://rentmedenver.com/",
+      "minUnitRequirement": 1,
+      "feeStructure": "8-10% of monthly rent",
+      "isFeatured": false,
+      "rating": 4.9,
+      "reviewCount": 412
+    },
+    {
+      "id": "evernest-property-management-denver",
+      "companyName": "Evernest Property Management",
+      "websiteUrl": "https://www.evernest.co/locations/denver/",
+      "minUnitRequirement": 1,
+      "feeStructure": "7-10% of monthly rent",
+      "isFeatured": false,
+      "rating": 4.5,
+      "reviewCount": 450
+    }
   ]
 }
