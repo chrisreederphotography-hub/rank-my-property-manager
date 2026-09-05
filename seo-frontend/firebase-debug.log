@@ -1,0 +1,70 @@
+[debug] [2026-08-31T22:34:56.883Z] ----------------------------------------------------------------------
+[debug] [2026-08-31T22:34:56.885Z] Command:       /Users/christopherreeder/node-v20.11.1-darwin-arm64/bin/node /Users/christopherreeder/.npm/_npx/ba4f1959e38407b5/node_modules/.bin/firebase deploy --project hi-company
+[debug] [2026-08-31T22:34:56.885Z] CLI Version:   15.28.2
+[debug] [2026-08-31T22:34:56.885Z] Platform:      darwin
+[debug] [2026-08-31T22:34:56.885Z] Node Version:  v20.11.1
+[debug] [2026-08-31T22:34:56.885Z] Detected Agent: antigravity
+[debug] [2026-08-31T22:34:56.885Z] Time:          Tue Sep 01 2026 08:34:56 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2026-08-31T22:34:56.885Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-31T22:34:57.275Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-08-31T22:34:57.275Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-08-31T22:34:57.275Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[warn] ⚠  JSON error trying to load /Users/christopherreeder/.gemini/antigravity/scratch/the-hi-company/seo_directory/.firebaserc 
+[debug] [2026-08-31T22:34:57.279Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-31T22:34:57.280Z] > authorizing via signed-in user (chrisreederphotography@gmail.com)
+[debug] [2026-08-31T22:34:57.280Z] [iam] checking project hi-company for permissions ["cloudsql.databases.create","cloudsql.databases.update","cloudsql.instances.connect","cloudsql.instances.create","cloudsql.instances.get","cloudsql.instances.list","cloudsql.instances.update","cloudsql.users.create","firebase.projects.get","firebasedataconnect.connectors.create","firebasedataconnect.connectors.delete","firebasedataconnect.connectors.list","firebasedataconnect.connectors.update","firebasedataconnect.operations.get","firebasedataconnect.schemas.create","firebasedataconnect.schemas.delete","firebasedataconnect.schemas.list","firebasedataconnect.schemas.update","firebasedataconnect.services.create","firebasedataconnect.services.delete","firebasedataconnect.services.list","firebasedataconnect.services.update","firebasehosting.sites.update"]
+[debug] [2026-08-31T22:34:57.280Z] Checked if tokens are valid: true, expires at: 1788219223417
+[debug] [2026-08-31T22:34:57.280Z] Checked if tokens are valid: true, expires at: 1788219223417
+[debug] [2026-08-31T22:34:57.281Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions [none]
+[debug] [2026-08-31T22:34:57.281Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions  x-goog-user-project=hi-company
+[debug] [2026-08-31T22:34:57.281Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["cloudsql.databases.create","cloudsql.databases.update","cloudsql.instances.connect","cloudsql.instances.create","cloudsql.instances.get","cloudsql.instances.list","cloudsql.instances.update","cloudsql.users.create","firebase.projects.get","firebasedataconnect.connectors.create","firebasedataconnect.connectors.delete","firebasedataconnect.connectors.list","firebasedataconnect.connectors.update","firebasedataconnect.operations.get","firebasedataconnect.schemas.create","firebasedataconnect.schemas.delete","firebasedataconnect.schemas.list","firebasedataconnect.schemas.update","firebasedataconnect.services.create","firebasedataconnect.services.delete","firebasedataconnect.services.list","firebasedataconnect.services.update","firebasehosting.sites.update"]}
+[debug] [2026-08-31T22:34:58.559Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions 200
+[debug] [2026-08-31T22:34:58.559Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["cloudsql.databases.create","cloudsql.databases.update","cloudsql.instances.connect","cloudsql.instances.create","cloudsql.instances.get","cloudsql.instances.list","cloudsql.instances.update","cloudsql.users.create","firebase.projects.get","firebasedataconnect.connectors.create","firebasedataconnect.connectors.delete","firebasedataconnect.connectors.list","firebasedataconnect.connectors.update","firebasedataconnect.operations.get","firebasedataconnect.schemas.create","firebasedataconnect.schemas.delete","firebasedataconnect.schemas.list","firebasedataconnect.schemas.update","firebasedataconnect.services.create","firebasedataconnect.services.delete","firebasedataconnect.services.list","firebasedataconnect.services.update","firebasehosting.sites.update"]}
+[debug] [2026-08-31T22:34:58.560Z] Checked if tokens are valid: true, expires at: 1788219223417
+[debug] [2026-08-31T22:34:58.560Z] Checked if tokens are valid: true, expires at: 1788219223417
+[debug] [2026-08-31T22:34:58.560Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hi-company [none]
+[debug] [2026-08-31T22:34:59.532Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hi-company 200
+[debug] [2026-08-31T22:34:59.532Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hi-company {"projectId":"hi-company","projectNumber":"1064951022052","displayName":"Hi company","name":"projects/hi-company","resources":{"hostingSite":"hi-company"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_ea2f3a5c-8086-46d2-893e-10872f8a1e91"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 16.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2026-08-31T22:35:01.623Z] Checked if tokens are valid: true, expires at: 1788219223417
+[debug] [2026-08-31T22:35:01.623Z] Checked if tokens are valid: true, expires at: 1788219223417
+[debug] [2026-08-31T22:35:01.623Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company [none]
+[debug] [2026-08-31T22:35:03.203Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company 200
+[debug] [2026-08-31T22:35:03.204Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company {"name":"projects/hi-company/sites/hi-company","defaultUrl":"https://hi-company.web.app","type":"DEFAULT_SITE"}
+[info] ▲ Next.js 16.3.3 (Turbopack)
+
+[info] - Environments: .env.local
+
+[info] ✓ Running next.config.ts took 71ms
+
+[info] 
+
+[info]   Creating an optimized production build ...
+
+[info] ✓ Compiled successfully in 1032ms
+
+[info]   Running TypeScript ...
+
+[info] src/app/[city]/page.tsx(16,11): error TS18048: 'data.city' is possibly 'undefined'.
+
+[info] src/app/[city]/page.tsx(23,34): error TS18048: 'd.city' is possibly 'undefined'.
+src/app/[city]/page.tsx(33,18): error TS18048: 'data.intro_paragraph' is possibly 'undefined'.
+src/app/[city]/page.tsx(41,38): error TS18048: 'd.city' is possibly 'undefined'.
+
+[info] Failed to type check.
+
+
+[debug] [2026-08-31T22:35:07.210Z] Error: ENOENT: no such file or directory, open '/Users/christopherreeder/.gemini/antigravity/scratch/the-hi-company/seo_directory/frontend/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

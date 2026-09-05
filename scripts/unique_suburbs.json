@@ -1,0 +1,402 @@
+[
+  {
+    "city": "Allen",
+    "state": "TX"
+  },
+  {
+    "city": "Alpharetta",
+    "state": "GA"
+  },
+  {
+    "city": "Anaheim",
+    "state": "CA"
+  },
+  {
+    "city": "Arlington Heights",
+    "state": "IL"
+  },
+  {
+    "city": "Aurora",
+    "state": "IL"
+  },
+  {
+    "city": "Berwyn",
+    "state": "IL"
+  },
+  {
+    "city": "Bolingbrook",
+    "state": "IL"
+  },
+  {
+    "city": "Bronxville",
+    "state": "NY"
+  },
+  {
+    "city": "Brookhaven",
+    "state": "GA"
+  },
+  {
+    "city": "Canton",
+    "state": "GA"
+  },
+  {
+    "city": "Carrollton",
+    "state": "TX"
+  },
+  {
+    "city": "Cicero",
+    "state": "IL"
+  },
+  {
+    "city": "Coppell",
+    "state": "TX"
+  },
+  {
+    "city": "Costa Mesa",
+    "state": "CA"
+  },
+  {
+    "city": "DeSoto",
+    "state": "TX"
+  },
+  {
+    "city": "Decatur",
+    "state": "GA"
+  },
+  {
+    "city": "Denton",
+    "state": "TX"
+  },
+  {
+    "city": "Des Plaines",
+    "state": "IL"
+  },
+  {
+    "city": "Dobbs Ferry",
+    "state": "NY"
+  },
+  {
+    "city": "Downey",
+    "state": "CA"
+  },
+  {
+    "city": "Duluth",
+    "state": "GA"
+  },
+  {
+    "city": "Duncanville",
+    "state": "TX"
+  },
+  {
+    "city": "Dunwoody",
+    "state": "GA"
+  },
+  {
+    "city": "East Point",
+    "state": "GA"
+  },
+  {
+    "city": "El Monte",
+    "state": "CA"
+  },
+  {
+    "city": "Elgin",
+    "state": "IL"
+  },
+  {
+    "city": "Euless",
+    "state": "TX"
+  },
+  {
+    "city": "Evanston",
+    "state": "IL"
+  },
+  {
+    "city": "Flower Mound",
+    "state": "TX"
+  },
+  {
+    "city": "Freeport",
+    "state": "NY"
+  },
+  {
+    "city": "Frisco",
+    "state": "TX"
+  },
+  {
+    "city": "Fullerton",
+    "state": "CA"
+  },
+  {
+    "city": "Gainesville",
+    "state": "GA"
+  },
+  {
+    "city": "Garden Grove",
+    "state": "CA"
+  },
+  {
+    "city": "Garland",
+    "state": "TX"
+  },
+  {
+    "city": "Glen Cove",
+    "state": "NY"
+  },
+  {
+    "city": "Glendale",
+    "state": "CA"
+  },
+  {
+    "city": "Grand Prairie",
+    "state": "TX"
+  },
+  {
+    "city": "Grapevine",
+    "state": "TX"
+  },
+  {
+    "city": "Harrison",
+    "state": "NY"
+  },
+  {
+    "city": "Hempstead",
+    "state": "NY"
+  },
+  {
+    "city": "Huntington Beach",
+    "state": "CA"
+  },
+  {
+    "city": "Inglewood",
+    "state": "CA"
+  },
+  {
+    "city": "Irvine",
+    "state": "CA"
+  },
+  {
+    "city": "Irving",
+    "state": "TX"
+  },
+  {
+    "city": "Johns Creek",
+    "state": "GA"
+  },
+  {
+    "city": "Joliet",
+    "state": "IL"
+  },
+  {
+    "city": "Kennesaw",
+    "state": "GA"
+  },
+  {
+    "city": "Lancaster",
+    "state": "CA"
+  },
+  {
+    "city": "Lewisville",
+    "state": "TX"
+  },
+  {
+    "city": "Long Beach",
+    "state": "CA"
+  },
+  {
+    "city": "Long Beach",
+    "state": "NY"
+  },
+  {
+    "city": "Mamaroneck",
+    "state": "NY"
+  },
+  {
+    "city": "Marietta",
+    "state": "GA"
+  },
+  {
+    "city": "McKinney",
+    "state": "TX"
+  },
+  {
+    "city": "Mesquite",
+    "state": "TX"
+  },
+  {
+    "city": "Milton",
+    "state": "GA"
+  },
+  {
+    "city": "Mount Prospect",
+    "state": "IL"
+  },
+  {
+    "city": "Mount Vernon",
+    "state": "NY"
+  },
+  {
+    "city": "Naperville",
+    "state": "IL"
+  },
+  {
+    "city": "New Rochelle",
+    "state": "NY"
+  },
+  {
+    "city": "Newnan",
+    "state": "GA"
+  },
+  {
+    "city": "Normal",
+    "state": "IL"
+  },
+  {
+    "city": "Oak Lawn",
+    "state": "IL"
+  },
+  {
+    "city": "Orange",
+    "state": "CA"
+  },
+  {
+    "city": "Orland Park",
+    "state": "IL"
+  },
+  {
+    "city": "Ossining",
+    "state": "NY"
+  },
+  {
+    "city": "Palatine",
+    "state": "IL"
+  },
+  {
+    "city": "Palmdale",
+    "state": "CA"
+  },
+  {
+    "city": "Pasadena",
+    "state": "CA"
+  },
+  {
+    "city": "Peachtree City",
+    "state": "GA"
+  },
+  {
+    "city": "Peekskill",
+    "state": "NY"
+  },
+  {
+    "city": "Plano",
+    "state": "TX"
+  },
+  {
+    "city": "Pomona",
+    "state": "CA"
+  },
+  {
+    "city": "Port Chester",
+    "state": "NY"
+  },
+  {
+    "city": "Richardson",
+    "state": "TX"
+  },
+  {
+    "city": "Roswell",
+    "state": "GA"
+  },
+  {
+    "city": "Rowlett",
+    "state": "TX"
+  },
+  {
+    "city": "Rye",
+    "state": "NY"
+  },
+  {
+    "city": "Sandy Springs",
+    "state": "GA"
+  },
+  {
+    "city": "Santa Ana",
+    "state": "CA"
+  },
+  {
+    "city": "Santa Clarita",
+    "state": "CA"
+  },
+  {
+    "city": "Scarsdale",
+    "state": "NY"
+  },
+  {
+    "city": "Schaumburg",
+    "state": "IL"
+  },
+  {
+    "city": "Skokie",
+    "state": "IL"
+  },
+  {
+    "city": "Smyrna",
+    "state": "GA"
+  },
+  {
+    "city": "Suwanee",
+    "state": "GA"
+  },
+  {
+    "city": "Tarrytown",
+    "state": "NY"
+  },
+  {
+    "city": "Tinley Park",
+    "state": "IL"
+  },
+  {
+    "city": "Torrance",
+    "state": "CA"
+  },
+  {
+    "city": "Tuckahoe",
+    "state": "NY"
+  },
+  {
+    "city": "Tucker",
+    "state": "GA"
+  },
+  {
+    "city": "Valley Stream",
+    "state": "NY"
+  },
+  {
+    "city": "Waukegan",
+    "state": "IL"
+  },
+  {
+    "city": "West Covina",
+    "state": "CA"
+  },
+  {
+    "city": "Wheaton",
+    "state": "IL"
+  },
+  {
+    "city": "White Plains",
+    "state": "NY"
+  },
+  {
+    "city": "Woodstock",
+    "state": "GA"
+  },
+  {
+    "city": "Wylie",
+    "state": "TX"
+  },
+  {
+    "city": "Yonkers",
+    "state": "NY"
+  }
+]

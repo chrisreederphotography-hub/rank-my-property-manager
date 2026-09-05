@@ -1,0 +1,406 @@
+[debug] [2026-09-05T03:33:54.386Z] ----------------------------------------------------------------------
+[debug] [2026-09-05T03:33:54.388Z] Command:       /Users/christopherreeder/node-v22.23.2-darwin-arm64/bin/node /Users/christopherreeder/.npm/_npx/ba4f1959e38407b5/node_modules/.bin/firebase deploy --only hosting --project hi-company
+[debug] [2026-09-05T03:33:54.388Z] CLI Version:   15.29.0
+[debug] [2026-09-05T03:33:54.388Z] Platform:      darwin
+[debug] [2026-09-05T03:33:54.388Z] Node Version:  v22.23.2
+[debug] [2026-09-05T03:33:54.388Z] Detected Agent: antigravity
+[debug] [2026-09-05T03:33:54.388Z] Time:          Sat Sep 05 2026 13:33:54 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2026-09-05T03:33:54.388Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-09-05T03:33:54.758Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-09-05T03:33:54.758Z] > authorizing via signed-in user (chrisreederphotography@gmail.com)
+[debug] [2026-09-05T03:33:54.758Z] [iam] checking project hi-company for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-09-05T03:33:54.763Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:54.763Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:54.763Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions [none]
+[debug] [2026-09-05T03:33:54.764Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions  x-goog-user-project=hi-company
+[debug] [2026-09-05T03:33:54.764Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-09-05T03:33:55.304Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions 200
+[debug] [2026-09-05T03:33:55.304Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-09-05T03:33:55.305Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:55.305Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:55.305Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hi-company [none]
+[debug] [2026-09-05T03:33:56.065Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hi-company 200
+[debug] [2026-09-05T03:33:56.065Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hi-company {"projectId":"hi-company","projectNumber":"1064951022052","displayName":"Hi company","name":"projects/hi-company","resources":{"hostingSite":"hi-company"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_ea2f3a5c-8086-46d2-893e-10872f8a1e91"}
+[debug] [2026-09-05T03:33:56.676Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:56.676Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:56.676Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites pageToken=&pageSize=10
+[debug] [2026-09-05T03:33:58.694Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites 200
+[debug] [2026-09-05T03:33:58.694Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites {"sites":[{"name":"projects/hi-company/sites/hi-company","defaultUrl":"https://hi-company.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-09-05T03:33:58.695Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:58.695Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:58.695Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites 
+[debug] [2026-09-05T03:33:59.545Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites 200
+[debug] [2026-09-05T03:33:59.545Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites {"sites":[{"name":"projects/hi-company/sites/hi-company","defaultUrl":"https://hi-company.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-09-05T03:33:59.545Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:59.546Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:33:59.546Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hi-company/webApps/-/config [none]
+[debug] [2026-09-05T03:34:00.926Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hi-company/webApps/-/config 200
+[debug] [2026-09-05T03:34:00.927Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hi-company/webApps/-/config {"projectId":"hi-company","appId":"1:1064951022052:web:119ff292bdc42c5f8c47f1","storageBucket":"hi-company.firebasestorage.app","apiKey":"AIzaSyBjmREfAhTn4cVbaVKg-aRtWZ71IYFHIxY","authDomain":"hi-company.firebaseapp.com","messagingSenderId":"1064951022052","projectNumber":"1064951022052","version":"2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 16.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2026-09-05T03:34:02.351Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:02.351Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:02.351Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company [none]
+[debug] [2026-09-05T03:34:03.029Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company 200
+[debug] [2026-09-05T03:34:03.029Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company {"name":"projects/hi-company/sites/hi-company","defaultUrl":"https://hi-company.web.app","type":"DEFAULT_SITE"}
+[info] ▲ Next.js 16.3.3 (Turbopack)
+
+[info] - Environments: .env.local
+
+[info] ⚠ Warning: Next.js ignored package-lock.json in /Users/christopherreeder/.gemini/antigravity/scratch/the-hi-company because it is outside the current Git repository (/Users/christopherreeder/.gemini/antigravity/scratch/the-hi-company/seo_directory).
+ To use this directory, set `turbopack.root` in your Next.js config.
+
+
+[info] ✓ Running next.config.ts took 14ms
+
+[info] 
+
+[info]   Creating an optimized production build ...
+
+[info] ✓ Compiled successfully in 365ms
+
+[info]   Running TypeScript ...
+
+[info]   Finished TypeScript in 824ms ...
+
+[info]   Collecting page data using 11 workers ...
+
+[info]   Generating static pages using 11 workers (0/23) ...
+
+[info]   Generating static pages using 11 workers (5/23) 
+
+[info]   Generating static pages using 11 workers (11/23) 
+
+[info]   Generating static pages using 11 workers (17/23) 
+
+[info] ✓ Generating static pages using 11 workers (23/23) in 259ms
+
+[info]   Finalizing page optimization ...
+
+[info] 
+
+[info] Route (app)
+┌ ○ /
+├ ○ /_not-found
+├   /[state]
+│ ├ ● /tx
+│ ├ ● /fl
+│ ├ ● /ga
+│ └ ● [+3 more paths]
+├   /[state]/[city]
+│ ├ ● /tx/austin
+│ ├ ● /fl/miami
+│ ├ ● /ga/atlanta
+│ └ ● [+4 more paths]
+├ ƒ /api/chat
+├ ○ /blog
+├ ƒ /blog/[slug]
+├ ○ /resources
+└   /resources/[slug]
+  ├ ● /resources/average-property-management-fees-2026
+  ├ ● /resources/how-to-screen-tenants
+  └ ● /resources/hire-property-manager-vs-diy
+
+
+[info] 
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • use of fallback /resources/[slug]
+[info]  • use of fallback /[state]
+[info]  • use of fallback /[state]/[city]
+[info]  • non-static component /api/chat/route
+[info]  • non-static component /blog/[slug]/page
+[info] 
+[debug] [2026-09-05T03:34:09.940Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:09.940Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:09.940Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company [none]
+[debug] [2026-09-05T03:34:11.414Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company 200
+[debug] [2026-09-05T03:34:11.414Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company {"name":"projects/hi-company/sites/hi-company","defaultUrl":"https://hi-company.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-09-05T03:34:20.458Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": "frontend",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "hi-company",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrhicompany",
+            "region": "us-central1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_global-error",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "300"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_global-error/layout,_N_T_/_global-error/page,_N_T_/_global-error"
+            }
+          ]
+        },
+        {
+          "source": "/blog",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "300"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/page,_N_T_/blog"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "300"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/resources",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "300"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/resources/layout,_N_T_/resources/page,_N_T_/resources"
+            }
+          ]
+        },
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoiaGktY29tcGFueSIsImFwcElkIjoiMToxMDY0OTUxMDIyMDUyOndlYjoxMTlmZjI5MmJkYzQyYzVmOGM0N2YxIiwic3RvcmFnZUJ1Y2tldCI6ImhpLWNvbXBhbnkuZmlyZWJhc2VzdG9yYWdlLmFwcCIsImFwaUtleSI6IkFJemFTeUJqbVJFZkFoVG40Y1ZiYVZLZy1hUnRXWjcxSVlGSEl4WSIsImF1dGhEb21haW4iOiJoaS1jb21wYW55LmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiMTA2NDk1MTAyMjA1MiIsInByb2plY3ROdW1iZXIiOiIxMDY0OTUxMDIyMDUyIiwidmVyc2lvbiI6IjIifSwiX2F1dGhUb2tlblN5bmNVUkwiOiIvX19zZXNzaW9uIn0; SameSite=Strict; Expires=2028-07-30T14:14:20.458Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/hi-company/hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/hi-company/functions",
+      "codebase": "firebase-frameworks-hi-company"
+    }
+  ]
+}
+[debug] [2026-09-05T03:34:20.459Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-09-05T03:34:20.459Z] > authorizing via signed-in user (chrisreederphotography@gmail.com)
+[debug] [2026-09-05T03:34:20.459Z] [iam] checking project hi-company for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-09-05T03:34:20.459Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:20.459Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:20.459Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions [none]
+[debug] [2026-09-05T03:34:20.459Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions  x-goog-user-project=hi-company
+[debug] [2026-09-05T03:34:20.459Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-09-05T03:34:20.959Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions 200
+[debug] [2026-09-05T03:34:20.959Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-09-05T03:34:20.960Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:20.960Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:20.960Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/hi-company/locations/-/functions [none]
+[debug] [2026-09-05T03:34:22.275Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/hi-company/locations/-/functions 200
+[debug] [2026-09-05T03:34:22.276Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/hi-company/locations/-/functions {}
+[debug] [2026-09-05T03:34:22.277Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:22.277Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:22.277Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/hi-company/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2026-09-05T03:34:24.064Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/hi-company/locations/-/functions 200
+[debug] [2026-09-05T03:34:24.064Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/hi-company/locations/-/functions {"functions":[{"name":"projects/hi-company/locations/us-central1/functions/ssrhicompany","buildConfig":{"build":"projects/1064951022052/locations/us-central1/builds/45122269-3b55-4ee9-85a3-0fcdb7ed8a6f","runtime":"nodejs20","entryPoint":"ssrhicompany","source":{"storageSource":{"bucket":"gcf-v2-sources-1064951022052-us-central1","object":"ssrhicompany/function-source.zip","generation":"1788430849752416"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/hi-company/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1064951022052-us-central1","object":"ssrhicompany/function-source.zip","generation":"1788430849752416"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/hi-company/serviceAccounts/1064951022052-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/hi-company/locations/us-central1/services/ssrhicompany","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"hi-company.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"hi-company\",\"appId\":\"1:1064951022052:web:119ff292bdc42c5f8c47f1\",\"storageBucket\":\"hi-company.firebasestorage.app\",\"apiKey\":\"AIzaSyBjmREfAhTn4cVbaVKg-aRtWZ71IYFHIxY\",\"authDomain\":\"hi-company.firebaseapp.com\",\"messagingSenderId\":\"1064951022052\",\"projectNumber\":\"1064951022052\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"hi-company\",\"storageBucket\":\"hi-company.firebasestorage.app\"}","GCLOUD_PROJECT":"hi-company","EVENTARC_CLOUD_EVENT_SOURCE":"projects/hi-company/locations/us-central1/services/ssrhicompany","FUNCTION_REGION":"us-central1","FUNCTION_TARGET":"ssrhicompany","LOG_EXECUTION_ID":"true"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://ssrhicompany-nfhjwpzstq-uc.a.run.app","serviceAccountEmail":"1064951022052-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssrhicompany-00012-les","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2026-09-03T10:24:37.502517279Z","labels":{"firebase-functions-codebase":"firebase-frameworks-hi-company","firebase-functions-hash":"fc08a854cfb2d68dc3501021040bbfe20d15dcf0","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-hi-company.cloudfunctions.net/ssrhicompany","createTime":"2026-08-30T09:26:27.386415359Z","satisfiesPzi":true}]}
+[info] i  hosting: The following function(s) are pinned to site hi-company and will be deployed as well: ssrhicompany 
+[info] 
+[info] === Deploying to 'hi-company'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2026-09-05T03:34:24.067Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:24.067Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:24.067Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/hi-company [none]
+[debug] [2026-09-05T03:34:24.328Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/hi-company 200
+[debug] [2026-09-05T03:34:24.328Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/hi-company {"projectNumber":"1064951022052","projectId":"hi-company","lifecycleState":"ACTIVE","name":"Hi company","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-01T07:42:54.722466Z"}
+[info] i  functions: preparing codebase firebase-frameworks-hi-company for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-09-05T03:34:24.330Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:24.330Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:24.330Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hi-company/adminSdkConfig [none]
+[debug] [2026-09-05T03:34:25.098Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hi-company/adminSdkConfig 200
+[debug] [2026-09-05T03:34:25.098Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hi-company/adminSdkConfig {"projectId":"hi-company","storageBucket":"hi-company.firebasestorage.app"}
+[debug] [2026-09-05T03:34:25.098Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:25.098Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:25.099Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hi-company/configs [none]
+[debug] [2026-09-05T03:34:25.936Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hi-company/configs 200
+[debug] [2026-09-05T03:34:25.937Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hi-company/configs {}
+[debug] [2026-09-05T03:34:25.941Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2026-09-05T03:34:26.320Z] > [functions] package.json contents: {
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "firebase": "^12.18.0",
+    "gray-matter": "^4.0.3",
+    "next": "16.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "^10.1.0",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^6.0.1",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "22"
+  }
+}
+[debug] [2026-09-05T03:34:26.320Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .firebase/hi-company/functions/.env 
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-hi-company to determine what to deploy 
+[debug] [2026-09-05T03:34:26.322Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-09-05T03:34:26.328Z] Found firebase-functions binary at '/Users/christopherreeder/.gemini/antigravity/scratch/the-hi-company/seo_directory/.firebase/hi-company/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8651
+
+[debug] [2026-09-05T03:34:26.573Z] Got response from /__/functions.yaml {"endpoints":{"ssrhicompany":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrhicompany"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2026-09-05T03:34:29.604Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-09-05T03:34:29.604Z] > authorizing via signed-in user (chrisreederphotography@gmail.com)
+[debug] [2026-09-05T03:34:29.604Z] [iam] checking project hi-company for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2026-09-05T03:34:29.604Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:29.604Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:29.604Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions [none]
+[debug] [2026-09-05T03:34:29.604Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions  x-goog-user-project=hi-company
+[debug] [2026-09-05T03:34:29.604Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-09-05T03:34:30.807Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions 200
+[debug] [2026-09-05T03:34:30.807Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hi-company:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-09-05T03:34:30.807Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:30.807Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:30.807Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/hi-company/instances pageSize=100&pageToken=
+[debug] [2026-09-05T03:34:32.202Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/hi-company/instances 200
+[debug] [2026-09-05T03:34:32.202Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/hi-company/instances {}
+[info] i  functions: Loaded environment variables from .firebase/hi-company/functions/.env 
+[debug] [2026-09-05T03:34:32.204Z] Attempting to merge .env secret bindings {} into declared secrets...)}
+[debug] [2026-09-05T03:34:32.204Z] ssrhicompany declared secrets: undefined
+[info] i  functions: preparing .firebase/hi-company/functions directory for uploading... 
+[info] i  functions: packaged /Users/christopherreeder/.gemini/antigravity/scratch/the-hi-company/seo_directory/.firebase/hi-company/functions (75.17 MB) for uploading 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2026-09-05T03:34:34.298Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:34.298Z] Checked if tokens are valid: true, expires at: 1788581885372
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2026-09-05T03:34:34.298Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:34.298Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:34.298Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-09-05T03:34:34.298Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/pubsub.googleapis.com:generateServiceIdentity  x-goog-user-project=1064951022052
+[debug] [2026-09-05T03:34:34.298Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2026-09-05T03:34:34.299Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-09-05T03:34:34.299Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/eventarc.googleapis.com:generateServiceIdentity  x-goog-user-project=1064951022052
+[debug] [2026-09-05T03:34:34.299Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2026-09-05T03:34:35.009Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2026-09-05T03:34:35.009Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1064951022052@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"102437557382987795288"}}
+[debug] [2026-09-05T03:34:35.798Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2026-09-05T03:34:35.799Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1064951022052/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1064951022052@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"106920220029716942317"}}
+[debug] [2026-09-05T03:34:35.802Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:35.802Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:35.802Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company [none]
+[debug] [2026-09-05T03:34:37.343Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company 200
+[debug] [2026-09-05T03:34:37.344Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hi-company/sites/hi-company {"name":"projects/hi-company/sites/hi-company","defaultUrl":"https://hi-company.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-09-05T03:34:37.346Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:37.346Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:37.347Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hi-company/versions [none]
+[debug] [2026-09-05T03:34:37.347Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hi-company/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2026-09-05T03:34:38.386Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hi-company/versions 200
+[debug] [2026-09-05T03:34:38.386Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hi-company/versions {"name":"projects/1064951022052/sites/hi-company/versions/84bb46557b1eb97e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2026-09-05T03:34:38.388Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:38.388Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:38.388Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/hi-company/billingInfo [none]
+[debug] [2026-09-05T03:34:38.388Z] >>> [apiv2][(partial)header] GET https://cloudbilling.googleapis.com/v1/projects/hi-company/billingInfo  x-goog-user-project=hi-company
+[debug] [2026-09-05T03:34:40.431Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/hi-company/billingInfo 200
+[debug] [2026-09-05T03:34:40.431Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/hi-company/billingInfo {"name":"projects/hi-company/billingInfo","projectId":"hi-company","billingAccountName":"billingAccounts/01FFF4-CED1FA-0A4CE1","billingEnabled":true}
+[debug] [2026-09-05T03:34:40.434Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:40.434Z] Checked if tokens are valid: true, expires at: 1788581885372
+[debug] [2026-09-05T03:34:40.434Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/hi-company/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2026-09-05T03:34:42.383Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/hi-company/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2026-09-05T03:34:42.383Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/hi-company/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-1064951022052.us-central1.cloudfunctions.appspot.com/c587edef-0f85-463d-a516-aaff162c523f.zip?GoogleAccessId=service-1064951022052@gcf-admin-robot.iam.gserviceaccount.com&Expires=1788581082&Signature=Dh7CxcwJ9wZBLaTXckcpFXDbQ%2BCuGve%2B2aJXBh4hSXU2%2BK5mmJLI%2Bhv2P%2BGzJlBN0w6%2BLhj8Sh%2BEu2%2FP%2F9g1GBJHoCLBS9x970pJ3tOXehzVcP8AOwufhSSO7cWFH2YwFGifGyV91w8%2FDFefdNpsfMvtyysv1stqQaj76dTefcMkbZbefFreXcjpwbhDQJcjE8tdyN%2FFZTInjIBsmE%2FH6OHNq1H%2BWj2eA2sMVbuVZWQLq4CgWSapQ522plmdjYlTbvttebtoQi0ORfat1lk47AlC0kW%2BEb4iD%2FwQnui1%2FbZYufginduFpDhbqgWu04Fe8s%2FYLwrQPAcw6%2BBkxNKIfg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-1064951022052.us-central1.cloudfunctions.appspot.com","object":"c587edef-0f85-463d-a516-aaff162c523f.zip"}}
+[debug] [2026-09-05T03:34:42.384Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-1064951022052.us-central1.cloudfunctions.appspot.com/c587edef-0f85-463d-a516-aaff162c523f.zip GoogleAccessId=service-1064951022052%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1788581082&Signature=Dh7CxcwJ9wZBLaTXckcpFXDbQ%2BCuGve%2B2aJXBh4hSXU2%2BK5mmJLI%2Bhv2P%2BGzJlBN0w6%2BLhj8Sh%2BEu2%2FP%2F9g1GBJHoCLBS9x970pJ3tOXehzVcP8AOwufhSSO7cWFH2YwFGifGyV91w8%2FDFefdNpsfMvtyysv1stqQaj76dTefcMkbZbefFreXcjpwbhDQJcjE8tdyN%2FFZTInjIBsmE%2FH6OHNq1H%2BWj2eA2sMVbuVZWQLq4CgWSapQ522plmdjYlTbvttebtoQi0ORfat1lk47AlC0kW%2BEb4iD%2FwQnui1%2FbZYufginduFpDhbqgWu04Fe8s%2FYLwrQPAcw6%2BBkxNKIfg%3D%3D
+[debug] [2026-09-05T03:34:42.384Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1064951022052.us-central1.cloudfunctions.appspot.com/c587edef-0f85-463d-a516-aaff162c523f.zip [stream]
