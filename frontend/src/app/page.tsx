@@ -1,7 +1,13 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showEmailCapture, setShowEmailCapture] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const topCities = [
     { name: 'Austin, TX', slug: 'tx/austin' },
     { name: 'Miami, FL', slug: 'fl/miami' },
@@ -10,6 +16,28 @@ export default function Home() {
     { name: 'Houston, TX', slug: 'tx/houston' },
     { name: 'Atlanta, GA', slug: 'ga/atlanta' },
   ];
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+    
+    // Check if query matches a top city (basic check)
+    const match = topCities.find(c => c.name.toLowerCase().includes(searchQuery.toLowerCase().trim()));
+    if (match) {
+       window.location.href = `/${match.slug}`;
+    } else {
+       // Progressive Disclosure: City not found, ask for email
+       setShowEmailCapture(true);
+    }
+  };
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    
+    // In a real app, save this to Firestore here
+    setIsSubmitted(true);
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-900">
@@ -41,10 +69,64 @@ export default function Home() {
           <h2 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
             Find the Best <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Property Management.</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
             We aggregate, rank, and review the top-rated property management companies across the United States. Compare fees, services, and tenant reviews to protect your investment.
           </p>
           
+          {/* Progressive Disclosure Search Bar */}
+          <div className="max-w-2xl mx-auto mb-12">
+            {!showEmailCapture ? (
+              <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
+                <input 
+                  type="text" 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Enter your Zip Code or City (e.g. Austin, TX)" 
+                  className="flex-1 rounded-xl border-slate-300 border-2 px-5 py-4 text-lg font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors shadow-sm"
+                  required
+                />
+                <button type="submit" className="rounded-xl bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-700 transition-all whitespace-nowrap">
+                  Search
+                </button>
+              </form>
+            ) : (
+              <div className="bg-white p-6 rounded-xl border border-amber-200 bg-amber-50 shadow-md animate-in fade-in zoom-in duration-300 text-left">
+                {isSubmitted ? (
+                  <div className="text-center py-4">
+                    <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <h4 className="text-lg font-bold text-slate-900">You're on the list!</h4>
+                    <p className="text-slate-600 mt-1">We'll notify you the minute our {searchQuery} rankings go live.</p>
+                  </div>
+                ) : (
+                  <>
+                    <h4 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+                      <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                      We're evaluating {searchQuery} right now.
+                    </h4>
+                    <p className="text-slate-600 mb-4 font-medium text-sm">
+                      Our analysts are currently ranking the top property managers in {searchQuery}. Drop your email below to get VIP early access when the data goes live.
+                    </p>
+                    <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-2">
+                      <input 
+                        type="email" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email address" 
+                        className="flex-1 rounded-lg border-slate-300 border-2 px-4 py-3 text-sm font-medium focus:border-amber-500 outline-none"
+                        required
+                      />
+                      <button type="submit" className="rounded-lg bg-amber-500 px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-amber-600 transition-all whitespace-nowrap">
+                        Get Early Access
+                      </button>
+                    </form>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
+
           <div className="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200 w-full text-left ring-1 ring-slate-900/5">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
