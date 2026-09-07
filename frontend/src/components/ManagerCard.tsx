@@ -22,8 +22,12 @@ interface Manager {
 
 export default function ManagerCard({ manager, rank }: { manager: Manager, rank?: number }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  
+  const [units, setUnits] = useState('');
+  const [zip, setZip] = useState('');
 
   // Strict adherence to NO FAKE DATA rule. Only use real properties.
   const rating = manager.rating; // Will be undefined initially
@@ -31,7 +35,16 @@ export default function ManagerCard({ manager, rank }: { manager: Manager, rank?
   const isVerified = manager.isVerified === true; // Must be explicitly true
   const propertyTypes = manager.propertyTypes || []; // Empty if unknown
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleStep1Submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setStep(2);
+    }, 1200);
+  };
+
+  const handleFinalSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -41,7 +54,8 @@ export default function ManagerCard({ manager, rank }: { manager: Manager, rank?
         name: formData.get('name'),
         email: formData.get('email'),
         phone: formData.get('phone'),
-        units: formData.get('units'),
+        units: units,
+        zip: zip,
         managerId: manager.id,
         managerName: manager.companyName,
         city: manager.city,
@@ -59,6 +73,7 @@ export default function ManagerCard({ manager, rank }: { manager: Manager, rank?
       setTimeout(() => {
         setIsModalOpen(false);
         setIsSuccess(false);
+        setStep(1);
       }, 3000);
     } catch (error) {
       console.error("Error submitting lead:", error);
@@ -184,12 +199,61 @@ export default function ManagerCard({ manager, rank }: { manager: Manager, rank?
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <h4 className="text-2xl font-black text-slate-900 mb-2">Request Sent!</h4>
-                <p className="text-slate-500 font-medium leading-relaxed">We've forwarded your information securely to {manager.companyName}. They will contact you shortly.</p>
+                <p className="text-slate-500 font-medium leading-relaxed">We've forwarded your property details securely to {manager.companyName}. They will contact you shortly.</p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="p-6 bg-white">
+            ) : step === 1 ? (
+              <form onSubmit={handleStep1Submit} className="p-6 bg-white">
                 <p className="text-sm text-slate-500 font-medium leading-relaxed mb-6">
-                  Fill out the form below and <span className="font-bold text-slate-900">{manager.companyName}</span> will contact you with a customized quote for your properties.
+                  Let's check if <span className="font-bold text-slate-900">{manager.companyName}</span> is a good match for your portfolio.
+                </p>
+                
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Property Zip Code</label>
+                    <input 
+                      required 
+                      type="text" 
+                      value={zip}
+                      onChange={e => setZip(e.target.value)}
+                      className="w-full rounded-xl border-slate-200 border-2 px-4 py-3 text-sm font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors" 
+                      placeholder="e.g. 90210" 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Total Units to Manage</label>
+                    <input 
+                      required 
+                      type="number" 
+                      min="1" 
+                      value={units}
+                      onChange={e => setUnits(e.target.value)}
+                      className="w-full rounded-xl border-slate-200 border-2 px-4 py-3 text-sm font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors" 
+                      placeholder="e.g. 4" 
+                    />
+                  </div>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full mt-8 rounded-xl bg-blue-600 px-4 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-700 hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
+                >
+                  {isSubmitting ? (
+                    <><svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Analyzing match...</>
+                  ) : "Check Availability"}
+                </button>
+              </form>
+            ) : (
+              <form onSubmit={handleFinalSubmit} className="p-6 bg-white">
+                <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-100 flex gap-3">
+                  <svg className="w-6 h-6 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <div>
+                    <p className="text-sm font-bold text-emerald-800">Great match!</p>
+                    <p className="text-xs font-medium text-emerald-600 mt-0.5">{manager.companyName} is currently accepting new portfolios in {zip}.</p>
+                  </div>
+                </div>
+                <p className="text-sm text-slate-500 font-medium leading-relaxed mb-6">
+                  Where should we send your customized quote?
                 </p>
                 
                 <div className="space-y-4">
@@ -201,26 +265,20 @@ export default function ManagerCard({ manager, rank }: { manager: Manager, rank?
                     <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Email Address</label>
                     <input name="email" required type="email" className="w-full rounded-xl border-slate-200 border-2 px-4 py-3 text-sm font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors" placeholder="john@example.com" />
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
-                      <input name="phone" required type="tel" className="w-full rounded-xl border-slate-200 border-2 px-4 py-3 text-sm font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors" placeholder="(555) 123-4567" />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Total Units</label>
-                      <input name="units" required type="number" min="1" className="w-full rounded-xl border-slate-200 border-2 px-4 py-3 text-sm font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors" placeholder="e.g. 4" />
-                    </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
+                    <input name="phone" required type="tel" className="w-full rounded-xl border-slate-200 border-2 px-4 py-3 text-sm font-medium focus:ring-0 focus:border-blue-600 outline-none transition-colors" placeholder="(555) 123-4567" />
                   </div>
                 </div>
                 
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full mt-8 rounded-xl bg-blue-600 px-4 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-700 hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
+                  className="w-full mt-8 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white shadow-lg shadow-slate-900/20 hover:bg-black hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
                 >
                   {isSubmitting ? (
                     <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                  ) : "Submit Request"}
+                  ) : "Get My Quote"}
                 </button>
               </form>
             )}
